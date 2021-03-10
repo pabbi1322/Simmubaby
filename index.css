@@ -1,0 +1,86 @@
+/*-------main-------*/
+
+body{
+    height: 1000px;
+}
+main{
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    background-color: #00fff3;
+    padding-top: 185px;
+    padding-bottom: 340px;
+    height: 300px;
+}
+.text{
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 55px;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 0 #01ded3;
+}
+.typed-text{
+    color: #dd7732;
+}
+.cursor{
+    display: inline-block;
+    width: 3px;
+    background-color: #dd7732;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% {background-color: #dd7732;}
+    49% {background-color: #dd7732;}
+    50% {background-color: transparent;}
+    99% {background-color: transparent;}
+    100% {background-color: #dd7732;}
+}
+
+
+/*-------section1-------*/
+
+.section1{
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    position: relative;
+    padding-top: 227px;
+    padding-bottom: 227px;
+}
+.section1 .box{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    animation: animate 30s linear infinite;
+}
+@keyframes animate{
+    0% {transform: perspective(1000px) rotateY(0deg);}
+    100% {transform: perspective(1000px) rotateY(360deg);}
+}
+.section1 .box span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: green;
+    border-radius: 21px;
+    border: solid 5px pink;
+    left: 0;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.section1 .box img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 19px;
+}
